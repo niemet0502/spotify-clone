@@ -1,25 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Sidebar from "./components/Sidebar"
+import Layout from "./components/Layout"
+import Footer from "./components/Footer"
+import styled from "styled-components"
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <AppContainer>
+      <div className="App">
+      <Sidebar />
+      <Layout />
     </div>
+    </AppContainer>
   );
 }
-
+const AppContainer = styled.div`
+  .App{
+    display: flex;
+  }
+ 
+`;
 export default App;
