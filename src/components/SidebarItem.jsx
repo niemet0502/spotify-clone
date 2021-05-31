@@ -5,7 +5,7 @@ function SidebarItem({Icon,text, active}) {
   return (
     <SidebarItemContainer>
       <a href="" className={"link " + (active == "true" ? "active" : "unactive")}>
-        <Icon/>
+        {Icon && <Icon />}
         {text}
       </a>
     </SidebarItemContainer>
