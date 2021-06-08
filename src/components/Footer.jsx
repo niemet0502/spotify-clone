@@ -5,6 +5,10 @@ import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import PlaylistPlayIcon from '@material-ui/icons/PlaylistPlay';
 import VolumeUpOutlinedIcon from '@material-ui/icons/VolumeUpOutlined';
 import SpeakerOutlinedIcon from '@material-ui/icons/SpeakerOutlined';
+
+import PauseCircleFilledOutlinedIcon from '@material-ui/icons/PauseCircleFilledOutlined';
+import SkipNextIcon from '@material-ui/icons/SkipNext';
+import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
 function Footer() {
   return (
     <FooterContainer>
@@ -22,7 +26,18 @@ function Footer() {
          </div>
         </div>
         <div className="song">
-          Progress bar
+          <div className="controls">
+            <div className="controls__button">
+              <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="Svg-ulyrgf-0 ghlXvf"><path d="M4.5 6.8l.7-.8C4.1 4.7 2.5 4 .9 4v1c1.3 0 2.6.6 3.5 1.6l.1.2zm7.5 4.7c-1.2 0-2.3-.5-3.2-1.3l-.6.8c1 1 2.4 1.5 3.8 1.5V14l3.5-2-3.5-2v1.5zm0-6V7l3.5-2L12 3v1.5c-1.6 0-3.2.7-4.2 2l-3.4 3.9c-.9 1-2.2 1.6-3.5 1.6v1c1.6 0 3.2-.7 4.2-2l3.4-3.9c.9-1 2.2-1.6 3.5-1.6z"></path></svg>
+              <SkipPreviousIcon/>
+              <PauseCircleFilledOutlinedIcon/>
+              <SkipNextIcon/>
+              <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="Svg-ulyrgf-0 ghlXvf"><path fill="none" d="M0 0h16v16H0z"></path><path d="M5 5V4c-2.2.3-4 2.2-4 4.5 0 .6.1 1.2.4 1.8l.9-.5C2.1 9.4 2 9 2 8.5 2 6.7 3.3 5.3 5 5zm5.5 7H6v-1.5l-3.5 2 3.5 2V13h4.5c1.9 0 3.5-1.2 4.2-2.8-.5.3-1 .5-1.5.6-.7.7-1.6 1.2-2.7 1.2zm1-12C9 0 7 2 7 4.5S9 9 11.5 9 16 7 16 4.5 14 0 11.5 0zm.9 7h-1.3V3.6H10v-1h.1c.2 0 .3 0 .4-.1.1 0 .3-.1.4-.2.1-.1.2-.2.2-.3.1-.1.1-.2.1-.3v-.1h1.1V7z"></path></svg>
+            </div>
+            <div className="progress_bar_song">
+              T
+            </div>
+          </div>
         </div>
         <div className="sounds">
           <PlaylistPlayIcon/>
@@ -91,6 +106,16 @@ const FooterContainer = styled.div`
   .song{
     border: 1px solid green;
     flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .song .controls{
+    width: 60%;
+    border: 1px solid blue;
+    height: 100%;
+    margin-right: -100px;
   }
   .sounds{
     border: 1px solid yellow;
@@ -117,6 +142,28 @@ const FooterContainer = styled.div`
     border: 1px solid #b3b3b3;
     background-color: #b3b3b3;
     border-radius: 2px;
+  }
+
+  .controls__button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .controls__button svg{
+    fill: #b3b3b3;
+  }
+  .controls__button svg:nth-child(3){
+    font-size: 45px;
+    fill: #fff;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  .controls__button svg:nth-child(1){
+    margin-right: 14px;
+  }
+
+  .controls__button svg:nth-child(6){
+    margin-left: 14px;
   }
 `;
 
