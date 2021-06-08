@@ -4,7 +4,8 @@ import logo from "../assets/spotifyLogo.png"
 import SidebarItem from "./SidebarItem"
 import SearchIcon from '@material-ui/icons/Search';
 import HomeIcon from '@material-ui/icons/Home';
-
+import AddBoxIcon from '@material-ui/icons/AddBox';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 function Sidebar() {
 
   const playlists = [
@@ -48,6 +49,17 @@ function Sidebar() {
             Icon={SearchIcon}
             text="Search"
           />
+
+          
+          <SidebarItem
+            Icon={AddBoxIcon}
+            text="New playlist"
+          />
+
+          <SidebarItem
+            Icon={FavoriteIcon}
+            text="Likes"
+          />
         </div>
 
         <div className="Sidebar__playlist">
@@ -86,6 +98,8 @@ const SidebarComponent = styled.div`
     border-top: 0.5px solid #b3b3b3;
     overflow: auto;
     flex: 2;
+    font-weight: 500;
+    padding-top: 15px;
   }
 `;
 
