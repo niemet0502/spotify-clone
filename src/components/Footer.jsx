@@ -35,7 +35,12 @@ function Footer() {
               <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="Svg-ulyrgf-0 ghlXvf"><path fill="none" d="M0 0h16v16H0z"></path><path d="M5 5V4c-2.2.3-4 2.2-4 4.5 0 .6.1 1.2.4 1.8l.9-.5C2.1 9.4 2 9 2 8.5 2 6.7 3.3 5.3 5 5zm5.5 7H6v-1.5l-3.5 2 3.5 2V13h4.5c1.9 0 3.5-1.2 4.2-2.8-.5.3-1 .5-1.5.6-.7.7-1.6 1.2-2.7 1.2zm1-12C9 0 7 2 7 4.5S9 9 11.5 9 16 7 16 4.5 14 0 11.5 0zm.9 7h-1.3V3.6H10v-1h.1c.2 0 .3 0 .4-.1.1 0 .3-.1.4-.2.1-.1.2-.2.2-.3.1-.1.1-.2.1-.3v-.1h1.1V7z"></path></svg>
             </div>
             <div className="progress_bar_song">
-              T
+              <p>0:54</p>
+              <div className="progress_bar">
+                <div className="progress_bar_listened"></div>
+                <div className="progress_bar_remaining"></div>
+              </div>
+              <p>3:34</p>
             </div>
           </div>
         </div>
@@ -60,14 +65,14 @@ const FooterContainer = styled.div`
     bottom: 0%;
     height: 11%;
     margin-left: -1px;
-    border-top: 0.3px solid grey;
+    //border-top: 0.3px solid grey;
 
     display: flex;
     padding: 20px;
   }
 
   .artist_info{
-    border: 1px solid red;
+   // border: 1px solid red;
     display: flex;
   }
 
@@ -104,7 +109,7 @@ const FooterContainer = styled.div`
     font-weight: 300;
   }
   .song{
-    border: 1px solid green;
+    //border: 1px solid green;
     flex: 2;
     display: flex;
     align-items: center;
@@ -113,12 +118,12 @@ const FooterContainer = styled.div`
 
   .song .controls{
     width: 60%;
-    border: 1px solid blue;
+    //border: 1px solid blue;
     height: 100%;
     margin-right: -100px;
   }
   .sounds{
-    border: 1px solid yellow;
+    //border: 1px solid yellow;
     display: flex;
     align-items: center;
   }
@@ -164,6 +169,43 @@ const FooterContainer = styled.div`
 
   .controls__button svg:nth-child(6){
     margin-left: 14px;
+  }
+
+  .progress_bar{
+    width: 490px;
+    height: 3.5px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 2px;
+    display: flex;
+    z-index: 1;
+    
+  }
+  .progress_bar_song{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .progress_bar_song p{
+    color: #b3b3b3;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .progress_bar_listened{
+    border-radius: 2px;
+    background-color: #b3b3b3;
+    border: 1px solid #b3b3b3;
+    z-index: 2;
+  }
+  .progress_bar_remaining{
+    width: 68%;
+    background-color: #b3b3b3;
+    opacity: 0.3;
+  }
+  .progress_bar_listened{
+    width: 32%;
   }
 `;
 
