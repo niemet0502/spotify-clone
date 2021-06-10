@@ -47,6 +47,10 @@ const TopbarContainer = styled.div`
     font-size: 23px;
     fill: #b3b3b3;
   }
+  .icon_container:hover{
+    cursor: pointer;
+    color: white;
+  }
 `;
 
 export default TopBar
