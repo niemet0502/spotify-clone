@@ -7,9 +7,9 @@ function Layout() {
     <LayoutContainer>
       <Topbar />
       <div className="Layout">
-        Test
-      <Footer/>
+        <h1>Bon après-midi</h1>
       </div>
+      <Footer/>
       
     </LayoutContainer>
   )
@@ -18,6 +18,12 @@ function Layout() {
 const LayoutContainer = styled.div`
   .Layout{
     border: 1px solid green;
+    margin-left: 220px;
+    padding: 10px 20px 15px 60px;
+    margin-top: 62px;
+    background-color: #1E1E1E;
+    color: white;
+    height: 800px;
   }
   flex: 2;
 `;
