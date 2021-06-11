@@ -4,9 +4,9 @@ import PauseOutlinedIcon from '@material-ui/icons/PauseOutlined';
 function Playlist({image,title,active}) {
   return (
     <PlaylistComponent>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/4-44_album_cover.png/330px-4-44_album_cover.png" alt="" />
+      <img src={image} alt="" />
       <div className="playlist__name">
-        4:44
+        {title}
       </div>
       <div className="pauseIcon__container">
         {active && 
@@ -55,6 +55,9 @@ const PlaylistComponent = styled.div`
   }
   .pauseIcon__container .container:hover{
     cursor: pointer;
+  }
+  img{
+    border-radius: 2px 0px 0px 2px;
   }
 `;
 export default Playlist
