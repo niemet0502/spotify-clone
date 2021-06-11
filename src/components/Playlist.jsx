@@ -1,11 +1,60 @@
 import React from 'react'
-
-function Playlist() {
+import styled from "styled-components"
+import PauseOutlinedIcon from '@material-ui/icons/PauseOutlined';
+function Playlist({image,title,active}) {
   return (
-    <div>
-      
-    </div>
+    <PlaylistComponent>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/4-44_album_cover.png/330px-4-44_album_cover.png" alt="" />
+      <div className="playlist__name">
+        4:44
+      </div>
+      <div className="pauseIcon__container">
+        {active && 
+        <div className="container">
+          <PauseOutlinedIcon />
+        </div>
+        }
+      </div>
+    </PlaylistComponent>
   )
 }
+const PlaylistComponent = styled.div`
+  height: 90px;
+  width: 290px;
+  border-radius: 4px;
+  display: flex;
+  background-color: #303030;
+  box-shadow: 2px;
+  border: 1px solid #303030;
 
+  .playlist__name{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 17px;
+  }
+
+  .pauseIcon__container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .pauseIcon__container .container{
+    margin: 14px;
+    height: 37px;
+    width: 37px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1ED760;
+    border: 1px solid #1ED760;
+    box-shadow: 3px;
+  }
+  .pauseIcon__container .container:hover{
+    cursor: pointer;
+  }
+`;
 export default Playlist
