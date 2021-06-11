@@ -59,5 +59,9 @@ const PlaylistComponent = styled.div`
   img{
     border-radius: 2px 0px 0px 2px;
   }
+
+  &:hover{
+    cursor: pointer;
+  }
 `;
 export default Playlist
