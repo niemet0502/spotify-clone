@@ -58,7 +58,7 @@ function Footer() {
 
 const FooterContainer = styled.div`
   .Footer{
-    width: 97.4%;
+    width: 97.6%;
     background-color:rgb(24,24,24);
     z-index: 2;
     position: fixed;
