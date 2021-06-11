@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Footer from "../components/Footer"
 import Topbar from "../components/TopBar"
 import Playlist from "../components/Playlist"
-
+import Album from "../components/Album"
 function Layout() {
   return (
     <LayoutContainer>
@@ -22,6 +22,12 @@ function Layout() {
         <div className="section_container">
           <h1 className="section__title">Recommandations du jour</h1>
           <h5 className="section__subtitle">Inspiré par votre activité récente.</h5>
+
+          <div className="album__container">
+
+          {albums.map(album => <Album image={album.image} artiste={album.artiste} album={album.album}   />)}
+          </div>
+
         </div>
       </div>
       <Footer/>
@@ -43,7 +49,7 @@ const LayoutContainer = styled.div`
     margin-top: 62px;
     background-color: #1E1E1E;
     color: white;
-    height: 800px;
+    height: 900px;
   }
 
   .Layout h1{
@@ -65,6 +71,11 @@ const LayoutContainer = styled.div`
     color: #b3b3b3;
   }
   flex: 2;
+
+  .album__container{
+    display: flex;
+    justify-content: space-between;
+  }
 `;
 export default Layout
 
@@ -117,4 +128,44 @@ const playlists2 = [
     title: 'Apollo',
     active: false
   }
+]
+
+const albums = [
+  {
+    id: 1,
+    image: "https://i.pinimg.com/originals/8e/4e/1c/8e4e1c31eb27d6871261e1348b1cbac5.jpg",
+    artiste: "Freeze corleon",
+    album: "LMF"
+  },
+  {
+    id: 2,
+    image: "https://intrld.com/wp-content/uploads/2018/04/dinos-imany-review-560x600.jpg",
+    artiste: "Dinos",
+    album: "Imani"
+  },
+  {
+    id: 3,
+    image: "https://www.booska-p.com/up/images/news/ninho.jpg",
+    artiste: "Ninho",
+    album: "COMME PREVU"
+  },
+  {
+    id: 4,
+    image: "http://images.genius.com/1a572edbf6da198c99dacd7c19282804.1000x1000x1.jpg",
+    artiste: "Damso",
+    album: "Ipséité"
+  },
+  {
+    id: 5,
+    image: "https://cdns-images.dzcdn.net/images/cover/93f97fc8b4bf3246af1c38906b8662da/500x500.jpg",
+    artiste: "Fally Ipupa",
+    album: "Tokooos 2"
+  },
+  {
+    id: 6,
+    image: "https://images.genius.com/e55beb13d8248ba08407d002a3efd239.1000x1000x1.jpg",
+    artiste: "MHD",
+    album: "MHD"
+  }
+  
 ]

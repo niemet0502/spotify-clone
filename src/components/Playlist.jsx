@@ -19,7 +19,7 @@ function Playlist({image,title,active}) {
   )
 }
 const PlaylistComponent = styled.div`
-  height: 90px;
+  height: 87px;
   width: 290px;
   border-radius: 4px;
   display: flex;

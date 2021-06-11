@@ -63,7 +63,7 @@ const FooterContainer = styled.div`
     z-index: 2;
     position: fixed;
     bottom: 0%;
-    height: 11%;
+    height: 10.5%;
     margin-left: -1px;
     //border-top: 0.3px solid grey;
 
