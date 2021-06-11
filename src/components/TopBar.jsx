@@ -22,9 +22,11 @@ function TopBar() {
 
 const TopbarContainer = styled.div`
   .Topbar{
+    position: fixed;
     background-color: #1E1E1E;
     margin-left: 220px;
     padding: 15px 20px 15px 60px;
+    width: 100%;
   }
   .Topbar__icons{
     display: flex;
