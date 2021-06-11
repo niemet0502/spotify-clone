@@ -19,6 +19,10 @@ function Layout() {
         <div className="playlist_container">
         {playlists.map(playlist => <Playlist image={playlist.image} active={playlist.active} title={playlist.title}   />)}
         </div>
+        <div className="section_container">
+          <h1 className="section__title">Recommandations du jour</h1>
+          <h5 className="section__subtitle">Inspiré par votre activité récente.</h5>
+        </div>
       </div>
       <Footer/>
       
@@ -40,6 +44,25 @@ const LayoutContainer = styled.div`
     background-color: #1E1E1E;
     color: white;
     height: 800px;
+  }
+
+  .Layout h1{
+    font-size: 25px;
+  }
+
+  .section__title {
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+
+  .section__title:hover{
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  .section__subtitle{
+    margin-top: 0px;
+    font-weight: 500;
+    color: #b3b3b3;
   }
   flex: 2;
 `;
