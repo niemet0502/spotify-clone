@@ -47,9 +47,7 @@ const AlbumComponent = styled.div`
     color: #b3b3b3;
   }
   .container{
-    //right: 0px;
     margin: 14px;
-    margin-top: -25px;
     height: 37px;
     width: 37px;
     border-radius: 50%;
@@ -60,6 +58,17 @@ const AlbumComponent = styled.div`
     border: 1px solid #1ED760;
     box-shadow: 3px;
     z-index: 4;
+    position: absolute;
+    margin-top: -62px;
+    margin-left: 110px;
+    display: none;
+    transition-property: top;
+  }
+
+  &:hover .container{
+    display: flex;
+    margin-top: -64px;
+    transition: margin 2s;
   }
 `;
 
