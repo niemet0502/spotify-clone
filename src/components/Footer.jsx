@@ -38,6 +38,7 @@ function Footer() {
               <p>0:54</p>
               <div className="progress_bar">
                 <div className="progress_bar_listened"></div>
+                <div className="rounded"></div>
                 <div className="progress_bar_remaining"></div>
               </div>
               <p>3:34</p>
@@ -210,6 +211,27 @@ const FooterContainer = styled.div`
   }
   .progress_bar_listened{
     width: 32%;
+    
+  }
+
+  .progress_bar:hover .progress_bar_listened{
+    background-color: #1ED760;
+    border: 1px solid #1ED760;
+  }
+
+  .rounded{
+    background-color: red;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin-left: -2px;
+    margin-top: -3px;
+    z-index: 5;
+    background-color: white;
+    display: none;
+  }
+  .progress_bar:hover .rounded{
+    display: block;
   }
 `;
 
