@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
 import PauseOutlinedIcon from '@material-ui/icons/PauseOutlined';
+import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 function Playlist({image,title,active}) {
   return (
     <PlaylistComponent>
@@ -9,11 +10,17 @@ function Playlist({image,title,active}) {
         {title}
       </div>
       <div className="pauseIcon__container">
-        {active && 
+        
+        {active ? 
         <div className="container">
           <PauseOutlinedIcon />
         </div>
+         : 
+         <div className="container play__icon">
+         <PlayArrowIcon  />
+         </div>
         }
+        
       </div>
     </PlaylistComponent>
   )
@@ -59,9 +66,17 @@ const PlaylistComponent = styled.div`
   img{
     border-radius: 2px 0px 0px 2px;
   }
+  .play__icon{
+    display: none !important;
+  }
 
-  &:hover{
+  &:hover {
+
     cursor: pointer;
+  }
+
+  &:hover  .play__icon{
+    display: flex !important;
   }
 `;
 export default Playlist
