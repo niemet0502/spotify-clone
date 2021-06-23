@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from "styled-components"
 import footer from "../assets/footer.jpg"
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
@@ -9,7 +9,11 @@ import SpeakerOutlinedIcon from '@material-ui/icons/SpeakerOutlined';
 import PauseCircleFilledOutlinedIcon from '@material-ui/icons/PauseCircleFilledOutlined';
 import SkipNextIcon from '@material-ui/icons/SkipNext';
 import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
+
+import FavoriteIcon from '@material-ui/icons/Favorite';
 function Footer() {
+  const [like, setLike] = useState(true)
+
   return (
     <FooterContainer>
       <div className="Footer">
@@ -21,7 +25,16 @@ function Footer() {
             <h6>Fally Ipupa</h6>
           </div>
           <div>
-            <FavoriteBorderIcon />
+            {like ?  
+            <FavoriteIcon
+            className="likeButton"
+            onClick={ () => setLike(!like)}
+            style={{fill: '#1ED760'}} /> :
+              <FavoriteBorderIcon
+              className="likeButton"
+              onClick={ () => setLike(!like)}
+              />
+            }
           </div>
          </div>
         </div>
@@ -259,6 +272,9 @@ const FooterContainer = styled.div`
   .progress__bar_volume_container:hover .progress-bar-volume{
     background-color: #1ED760;
     border: 1px solid #1ED760;
+  }
+  .likeButton{
+    cursor: pointer;
   }
 `;
 
