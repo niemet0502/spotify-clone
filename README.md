@@ -32,4 +32,4 @@ npm start
 <br>
 <img width="90%" src="src/assets/spotify.PNG">
 
-<a href="https://twitter-clone-mar.netlify.app/" target="_blank">Live</a>
+<a href="https://m-spotify-clone.netlify.app/" target="_blank">Live</a>
