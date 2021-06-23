@@ -49,7 +49,10 @@ function Footer() {
           <PlaylistPlayIcon/>
           <SpeakerOutlinedIcon/>
           <VolumeUpOutlinedIcon/>
+          <div className="progress__bar_volume_container">
           <div className="progress-bar-volume"></div>
+          <div className="rounded-volume"></div>
+          </div>
           <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="Svg-ulyrgf-0 ghlXvf"><path d="M6.064 10.229l-2.418 2.418L2 11v4h4l-1.647-1.646 2.418-2.418-.707-.707zM11 2l1.647 1.647-2.418 2.418.707.707 2.418-2.418L15 6V2h-4z"></path></svg>
         </div>
       </div>
@@ -232,6 +235,30 @@ const FooterContainer = styled.div`
   }
   .progress_bar:hover .rounded{
     display: block;
+  }
+
+
+  .rounded-volume{
+    background-color: red;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    margin-left: -2px;
+    z-index: 5;
+    background-color: rgb(24,24,24);
+  }
+  .progress__bar_volume_container{
+    display: flex;
+    align-items: center;
+  }
+
+  .progress__bar_volume_container:hover .rounded-volume{
+    background-color: white;
+  }
+
+  .progress__bar_volume_container:hover .progress-bar-volume{
+    background-color: #1ED760;
+    border: 1px solid #1ED760;
   }
 `;
 
