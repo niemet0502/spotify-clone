@@ -157,12 +157,16 @@ const FooterContainer = styled.div`
   .controls__button svg{
     fill: #b3b3b3;
   }
+  .controls__button svg:hover{
+    fill: #fff;
+  }
   .controls__button svg:nth-child(3){
     font-size: 45px;
     fill: #fff;
     margin-left: 8px;
     margin-right: 8px;
   }
+
   .controls__button svg:nth-child(1){
     margin-right: 14px;
   }

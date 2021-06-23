@@ -1,9 +1,13 @@
 import React from 'react'
 import styled from "styled-components"
-function Album({image,artiste, album}) {
+import PlayArrowIcon from '@material-ui/icons/PlayArrow';
+function Album({image,artiste, album, round}) {
   return (
     <AlbumComponent>
-      <img src={image} alt="" />
+      <img style={ round ? {borderRadius: "50%"}: {}} src={image} alt="" />
+      <div className="container">
+        <PlayArrowIcon />
+      </div>
       <h2>{artiste}</h2>
       <h6>{album}</h6>
     </AlbumComponent>
@@ -11,6 +15,11 @@ function Album({image,artiste, album}) {
 }
 
 const AlbumComponent = styled.div`
+  &:hover{
+    cursor: pointer;
+    background-color: #282828;
+    transition: 0.5s;
+  }
   width: 158px;
   border-radius: 2px;
   background-color: #181818;
@@ -21,6 +30,7 @@ const AlbumComponent = styled.div`
     height: 150px;
     margin-bottom: 15px;
     box-shadow: 2px;
+    z-index: -1;
   }
 
   h2{
@@ -35,6 +45,21 @@ const AlbumComponent = styled.div`
     margin-bottom: 2px;
     font-weight: 300;
     color: #b3b3b3;
+  }
+  .container{
+    //right: 0px;
+    margin: 14px;
+    margin-top: -25px;
+    height: 37px;
+    width: 37px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1ED760;
+    border: 1px solid #1ED760;
+    box-shadow: 3px;
+    z-index: 4;
   }
 `;
 
