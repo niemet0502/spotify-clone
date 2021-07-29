@@ -1,39 +1,39 @@
-import React from 'react'
-import styled from "styled-components"
-import logo from "../assets/spotifyLogo.png"
-import SidebarItem from "./SidebarItem"
+import React from 'react';
+import styled from 'styled-components';
 import SearchIcon from '@material-ui/icons/Search';
 import HomeIcon from '@material-ui/icons/Home';
 import AddBoxIcon from '@material-ui/icons/AddBox';
 import FavoriteIcon from '@material-ui/icons/Favorite';
-function Sidebar() {
+import SidebarItem from './SidebarItem';
+import logo from '../assets/spotifyLogo.png';
 
+function Sidebar() {
   const playlists = [
     {
       id: 1,
-      title: 'Sad'
+      title: 'Sad',
     },
     {
       id: 2,
-      title: 'Tired'
+      title: 'Tired',
     },
     {
       id: 3,
-      title: 'Nija'
-    },{
+      title: 'Nija',
+    }, {
       id: 4,
-      title: 'Rap FR'
-    },{
+      title: 'Rap FR',
+    }, {
       id: 5,
-      title: 'Drill'
-    },{
+      title: 'Drill',
+    }, {
       id: 6,
-      title: 'Reap US '
-    },{
+      title: 'Reap US ',
+    }, {
       id: 7,
-      title: 'Latino'
-    }
-  ]
+      title: 'Latino',
+    },
+  ];
 
   return (
     <SidebarComponent>
@@ -43,14 +43,14 @@ function Sidebar() {
           <SidebarItem
             Icon={HomeIcon}
             text="Home"
-            active="true"/>
+            active="true"
+          />
 
           <SidebarItem
             Icon={SearchIcon}
             text="Search"
           />
 
-          
           <SidebarItem
             Icon={AddBoxIcon}
             text="New playlist"
@@ -63,11 +63,11 @@ function Sidebar() {
         </div>
 
         <div className="Sidebar__playlist">
-        {playlists.map(playlist => <SidebarItem text={playlist.title}   />)}
+          {playlists.map((playlist) => <SidebarItem text={playlist.title} />)}
         </div>
       </div>
     </SidebarComponent>
-  )
+  );
 }
 
 const SidebarComponent = styled.div`
@@ -103,4 +103,4 @@ const SidebarComponent = styled.div`
   }
 `;
 
-export default Sidebar
+export default Sidebar;

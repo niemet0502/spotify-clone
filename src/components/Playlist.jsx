@@ -1,8 +1,10 @@
-import React from 'react'
-import styled from "styled-components"
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import PauseOutlinedIcon from '@material-ui/icons/PauseOutlined';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
-function Playlist({image,title,active}) {
+
+function Playlist({ image, title, active }) {
   return (
     <PlaylistComponent>
       <img src={image} alt="" />
@@ -10,21 +12,30 @@ function Playlist({image,title,active}) {
         {title}
       </div>
       <div className="pauseIcon__container">
-        
-        {active ? 
-        <div className="container">
-          <PauseOutlinedIcon />
-        </div>
-         : 
-         <div className="container play__icon">
-         <PlayArrowIcon  />
-         </div>
-        }
-        
+
+        {active
+          ? (
+            <div className="container">
+              <PauseOutlinedIcon />
+            </div>
+          )
+          : (
+            <div className="container play__icon">
+              <PlayArrowIcon />
+            </div>
+          )}
+
       </div>
     </PlaylistComponent>
-  )
+  );
 }
+
+Playlist.propTypes = {
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  active: PropTypes.bool.isRequired,
+};
+
 const PlaylistComponent = styled.div`
   height: 87px;
   width: 290px;
@@ -79,4 +90,4 @@ const PlaylistComponent = styled.div`
     display: flex !important;
   }
 `;
-export default Playlist
+export default Playlist;

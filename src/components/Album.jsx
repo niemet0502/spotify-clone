@@ -1,18 +1,29 @@
-import React from 'react'
-import styled from "styled-components"
+import React from 'react';
+import styled from 'styled-components';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
-function Album({image,artiste, album, round}) {
+import PropTypes from 'prop-types';
+
+function Album({
+  image, artiste, album, round,
+}) {
   return (
     <AlbumComponent>
-      <img style={ round ? {borderRadius: "50%"}: {}} src={image} alt="" />
+      <img style={round ? { borderRadius: '50%' } : {}} src={image} alt="" />
       <div className="container">
         <PlayArrowIcon />
       </div>
       <h2>{artiste}</h2>
       <h6>{album}</h6>
     </AlbumComponent>
-  )
+  );
 }
+
+Album.propTypes = {
+  image: PropTypes.string.isRequired,
+  artiste: PropTypes.string.isRequired,
+  album: PropTypes.string.isRequired,
+  round: PropTypes.bool.isRequired,
+};
 
 const AlbumComponent = styled.div`
   &:hover{
@@ -72,4 +83,4 @@ const AlbumComponent = styled.div`
   }
 `;
 
-export default Album
+export default Album;

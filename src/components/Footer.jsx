@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
-import styled from "styled-components"
-import footer from "../assets/footer.jpg"
+import React, { useState } from 'react';
+import styled from 'styled-components';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import PlaylistPlayIcon from '@material-ui/icons/PlaylistPlay';
 import VolumeUpOutlinedIcon from '@material-ui/icons/VolumeUpOutlined';
@@ -11,66 +10,77 @@ import SkipNextIcon from '@material-ui/icons/SkipNext';
 import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
 
 import FavoriteIcon from '@material-ui/icons/Favorite';
+import footer from '../assets/footer.jpg';
+
 function Footer() {
-  const [like, setLike] = useState(true)
+  const [like, setLike] = useState(true);
 
   return (
     <FooterContainer>
       <div className="Footer">
         <div className="artist_info">
-         <div> <img src={footer} alt="" /></div>
-         <div className="song_info">
           <div>
-            <h3>Amore</h3>
-            <h6>Fally Ipupa</h6>
+            {' '}
+            <img src={footer} alt="" />
           </div>
-          <div>
-            {like ?  
-            <FavoriteIcon
-            className="likeButton"
-            onClick={ () => setLike(!like)}
-            style={{fill: '#1ED760'}} /> :
-              <FavoriteBorderIcon
-              className="likeButton"
-              onClick={ () => setLike(!like)}
-              />
-            }
+          <div className="song_info">
+            <div>
+              <h3>Amore</h3>
+              <h6>Fally Ipupa</h6>
+            </div>
+            <div>
+              {like
+                ? (
+                  <FavoriteIcon
+                    className="likeButton"
+                    onClick={() => setLike(!like)}
+                    style={{ fill: '#1ED760' }}
+                  />
+                ) : (
+                  <FavoriteBorderIcon
+                    className="likeButton"
+                    onClick={() => setLike(!like)}
+                  />
+                )}
+            </div>
           </div>
-         </div>
         </div>
         <div className="song">
           <div className="controls">
             <div className="controls__button">
-              <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="Svg-ulyrgf-0 ghlXvf"><path d="M4.5 6.8l.7-.8C4.1 4.7 2.5 4 .9 4v1c1.3 0 2.6.6 3.5 1.6l.1.2zm7.5 4.7c-1.2 0-2.3-.5-3.2-1.3l-.6.8c1 1 2.4 1.5 3.8 1.5V14l3.5-2-3.5-2v1.5zm0-6V7l3.5-2L12 3v1.5c-1.6 0-3.2.7-4.2 2l-3.4 3.9c-.9 1-2.2 1.6-3.5 1.6v1c1.6 0 3.2-.7 4.2-2l3.4-3.9c.9-1 2.2-1.6 3.5-1.6z"></path></svg>
-              <SkipPreviousIcon/>
-              <PauseCircleFilledOutlinedIcon/>
-              <SkipNextIcon/>
-              <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="Svg-ulyrgf-0 ghlXvf"><path fill="none" d="M0 0h16v16H0z"></path><path d="M5 5V4c-2.2.3-4 2.2-4 4.5 0 .6.1 1.2.4 1.8l.9-.5C2.1 9.4 2 9 2 8.5 2 6.7 3.3 5.3 5 5zm5.5 7H6v-1.5l-3.5 2 3.5 2V13h4.5c1.9 0 3.5-1.2 4.2-2.8-.5.3-1 .5-1.5.6-.7.7-1.6 1.2-2.7 1.2zm1-12C9 0 7 2 7 4.5S9 9 11.5 9 16 7 16 4.5 14 0 11.5 0zm.9 7h-1.3V3.6H10v-1h.1c.2 0 .3 0 .4-.1.1 0 .3-.1.4-.2.1-.1.2-.2.2-.3.1-.1.1-.2.1-.3v-.1h1.1V7z"></path></svg>
+              <svg role="img" height="16" width="16" viewBox="0 0 16 16" className="Svg-ulyrgf-0 ghlXvf"><path d="M4.5 6.8l.7-.8C4.1 4.7 2.5 4 .9 4v1c1.3 0 2.6.6 3.5 1.6l.1.2zm7.5 4.7c-1.2 0-2.3-.5-3.2-1.3l-.6.8c1 1 2.4 1.5 3.8 1.5V14l3.5-2-3.5-2v1.5zm0-6V7l3.5-2L12 3v1.5c-1.6 0-3.2.7-4.2 2l-3.4 3.9c-.9 1-2.2 1.6-3.5 1.6v1c1.6 0 3.2-.7 4.2-2l3.4-3.9c.9-1 2.2-1.6 3.5-1.6z" /></svg>
+              <SkipPreviousIcon />
+              <PauseCircleFilledOutlinedIcon />
+              <SkipNextIcon />
+              <svg role="img" height="16" width="16" viewBox="0 0 16 16" className="Svg-ulyrgf-0 ghlXvf">
+                <path fill="none" d="M0 0h16v16H0z" />
+                <path d="M5 5V4c-2.2.3-4 2.2-4 4.5 0 .6.1 1.2.4 1.8l.9-.5C2.1 9.4 2 9 2 8.5 2 6.7 3.3 5.3 5 5zm5.5 7H6v-1.5l-3.5 2 3.5 2V13h4.5c1.9 0 3.5-1.2 4.2-2.8-.5.3-1 .5-1.5.6-.7.7-1.6 1.2-2.7 1.2zm1-12C9 0 7 2 7 4.5S9 9 11.5 9 16 7 16 4.5 14 0 11.5 0zm.9 7h-1.3V3.6H10v-1h.1c.2 0 .3 0 .4-.1.1 0 .3-.1.4-.2.1-.1.2-.2.2-.3.1-.1.1-.2.1-.3v-.1h1.1V7z" />
+              </svg>
             </div>
             <div className="progress_bar_song">
               <p>0:54</p>
               <div className="progress_bar">
-                <div className="progress_bar_listened"></div>
-                <div className="rounded"></div>
-                <div className="progress_bar_remaining"></div>
+                <div className="progress_bar_listened" />
+                <div className="rounded" />
+                <div className="progress_bar_remaining" />
               </div>
               <p>3:34</p>
             </div>
           </div>
         </div>
         <div className="sounds">
-          <PlaylistPlayIcon/>
-          <SpeakerOutlinedIcon/>
-          <VolumeUpOutlinedIcon/>
+          <PlaylistPlayIcon />
+          <SpeakerOutlinedIcon />
+          <VolumeUpOutlinedIcon />
           <div className="progress__bar_volume_container">
-          <div className="progress-bar-volume"></div>
-          <div className="rounded-volume"></div>
+            <div className="progress-bar-volume" />
+            <div className="rounded-volume" />
           </div>
-          <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="Svg-ulyrgf-0 ghlXvf"><path d="M6.064 10.229l-2.418 2.418L2 11v4h4l-1.647-1.646 2.418-2.418-.707-.707zM11 2l1.647 1.647-2.418 2.418.707.707 2.418-2.418L15 6V2h-4z"></path></svg>
+          <svg role="img" height="16" width="16" viewBox="0 0 16 16" className="Svg-ulyrgf-0 ghlXvf"><path d="M6.064 10.229l-2.418 2.418L2 11v4h4l-1.647-1.646 2.418-2.418-.707-.707zM11 2l1.647 1.647-2.418 2.418.707.707 2.418-2.418L15 6V2h-4z" /></svg>
         </div>
       </div>
     </FooterContainer>
-  )
+  );
 }
 
 const FooterContainer = styled.div`
@@ -278,4 +288,4 @@ const FooterContainer = styled.div`
   }
 `;
 
-export default Footer
+export default Footer;
