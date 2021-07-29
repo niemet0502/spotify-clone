@@ -19,4 +19,9 @@ module.exports = {
   ],
   rules: {
   },
+  overrides: [
+    {
+      files: ['*.jsx', '*.js'],
+    },
+  ],
 };

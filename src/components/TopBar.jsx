@@ -1,23 +1,24 @@
-import React from 'react'
-import styled from "styled-components"
+import React from 'react';
+import styled from 'styled-components';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+
 function TopBar() {
   return (
     <TopbarContainer>
       <div className="Topbar">
-       <div className="Topbar__icons">
+        <div className="Topbar__icons">
           <div className="icon_container">
             <ArrowBackIosIcon />
           </div>
           <div className="icon_container">
             <ArrowForwardIosIcon />
           </div>
-       </div>
+        </div>
       </div>
     </TopbarContainer>
-  )
+  );
 }
 
 const TopbarContainer = styled.div`
@@ -55,4 +56,4 @@ const TopbarContainer = styled.div`
   }
 `;
 
-export default TopBar
+export default TopBar;

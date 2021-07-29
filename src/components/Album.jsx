@@ -1,17 +1,20 @@
-import React from 'react'
-import styled from "styled-components"
+import React from 'react';
+import styled from 'styled-components';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
-function Album({image,artiste, album, round}) {
+
+function Album({
+  image, artiste, album, round,
+}) {
   return (
     <AlbumComponent>
-      <img style={ round ? {borderRadius: "50%"}: {}} src={image} alt="" />
+      <img style={round ? { borderRadius: '50%' } : {}} src={image} alt="" />
       <div className="container">
         <PlayArrowIcon />
       </div>
       <h2>{artiste}</h2>
       <h6>{album}</h6>
     </AlbumComponent>
-  )
+  );
 }
 
 const AlbumComponent = styled.div`
@@ -72,4 +75,4 @@ const AlbumComponent = styled.div`
   }
 `;
 
-export default Album
+export default Album;

@@ -1,15 +1,15 @@
-import React from 'react'
-import styled from "styled-components"
+import React from 'react';
+import styled from 'styled-components';
 
-function SidebarItem({Icon,text, active}) {
+function SidebarItem({ Icon, text, active }) {
   return (
     <SidebarItemContainer>
-      <a href="" className={"link " + (active == "true" ? "active" : "unactive")}>
+      <a href="" className={`link ${active == 'true' ? 'active' : 'unactive'}`}>
         {Icon && <Icon />}
         {text}
       </a>
     </SidebarItemContainer>
-  )
+  );
 }
 const SidebarItemContainer = styled.a`
  
@@ -41,4 +41,4 @@ const SidebarItemContainer = styled.a`
   }
 
 `;
-export default SidebarItem
+export default SidebarItem;
