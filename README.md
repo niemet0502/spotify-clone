@@ -1,33 +1,32 @@
 # This Repo contain spotify Clone made with React js
 
-
 ## Installation
 
-* Clone this repo:
+- Clone this repo:
 
 ```bash
 git clone https://github.com/niemet0502/spotify-clone.git
 ```
 
-* Change directory to the project
+- Change directory to the project
 
 ```bash
 cd spotify-clone
 ```
 
-* Install dependencies
+- Install dependencies
 
 ```bash
 npm install or yarn install
 ```
 
-* launch project`
+- launch project`
 
 ```bash
 npm start
 ```
 
-* APP
+- APP
 
 <br>
 <img width="90%" src="src/assets/spotify.PNG">
