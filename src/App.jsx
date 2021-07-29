@@ -15,9 +15,8 @@ function App() {
   );
 }
 const AppContainer = styled.div`
-  .App{
+  .App {
     display: flex;
   }
- 
 `;
 export default App;

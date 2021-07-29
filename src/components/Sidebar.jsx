@@ -20,16 +20,20 @@ function Sidebar() {
     {
       id: 3,
       title: 'Nija',
-    }, {
+    },
+    {
       id: 4,
       title: 'Rap FR',
-    }, {
+    },
+    {
       id: 5,
       title: 'Drill',
-    }, {
+    },
+    {
       id: 6,
       title: 'Reap US ',
-    }, {
+    },
+    {
       id: 7,
       title: 'Latino',
     },
@@ -40,30 +44,19 @@ function Sidebar() {
       <div className="SidebarContainer">
         <img src={logo} alt="spotify-logo" />
         <div className="Sidebar__menu">
-          <SidebarItem
-            Icon={HomeIcon}
-            text="Home"
-            active="true"
-          />
+          <SidebarItem Icon={HomeIcon} text="Home" active="true" />
 
-          <SidebarItem
-            Icon={SearchIcon}
-            text="Search"
-          />
+          <SidebarItem Icon={SearchIcon} text="Search" />
 
-          <SidebarItem
-            Icon={AddBoxIcon}
-            text="New playlist"
-          />
+          <SidebarItem Icon={AddBoxIcon} text="New playlist" />
 
-          <SidebarItem
-            Icon={FavoriteIcon}
-            text="Likes"
-          />
+          <SidebarItem Icon={FavoriteIcon} text="Likes" />
         </div>
 
         <div className="Sidebar__playlist">
-          {playlists.map((playlist) => <SidebarItem text={playlist.title} />)}
+          {playlists.map((playlist) => (
+            <SidebarItem text={playlist.title} />
+          ))}
         </div>
       </div>
     </SidebarComponent>
@@ -71,7 +64,7 @@ function Sidebar() {
 }
 
 const SidebarComponent = styled.div`
-  .SidebarContainer{
+  .SidebarContainer {
     background-color: black;
     width: 220px;
     height: 85%;
@@ -83,18 +76,18 @@ const SidebarComponent = styled.div`
     z-index: 1;
   }
 
-  .SidebarContainer img{
+  .SidebarContainer img {
     width: 140px;
     margin-left: 8px;
   }
 
-  .Sidebar__menu{
+  .Sidebar__menu {
     display: flex;
     flex-direction: column;
     margin-top: 26px;
   }
 
-  .Sidebar__playlist{
+  .Sidebar__playlist {
     border-top: 0.5px solid #b3b3b3;
     overflow: auto;
     flex: 2;

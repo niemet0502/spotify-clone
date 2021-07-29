@@ -8,23 +8,17 @@ function Playlist({ image, title, active }) {
   return (
     <PlaylistComponent>
       <img src={image} alt="" />
-      <div className="playlist__name">
-        {title}
-      </div>
+      <div className="playlist__name">{title}</div>
       <div className="pauseIcon__container">
-
-        {active
-          ? (
-            <div className="container">
-              <PauseOutlinedIcon />
-            </div>
-          )
-          : (
-            <div className="container play__icon">
-              <PlayArrowIcon />
-            </div>
-          )}
-
+        {active ? (
+          <div className="container">
+            <PauseOutlinedIcon />
+          </div>
+        ) : (
+          <div className="container play__icon">
+            <PlayArrowIcon />
+          </div>
+        )}
       </div>
     </PlaylistComponent>
   );
@@ -45,7 +39,7 @@ const PlaylistComponent = styled.div`
   box-shadow: 2px;
   border: 1px solid #303030;
 
-  .playlist__name{
+  .playlist__name {
     flex: 2;
     display: flex;
     align-items: center;
@@ -54,12 +48,12 @@ const PlaylistComponent = styled.div`
     padding-left: 17px;
   }
 
-  .pauseIcon__container{
+  .pauseIcon__container {
     height: 100%;
     display: flex;
     align-items: center;
   }
-  .pauseIcon__container .container{
+  .pauseIcon__container .container {
     margin: 14px;
     height: 37px;
     width: 37px;
@@ -67,26 +61,25 @@ const PlaylistComponent = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #1ED760;
-    border: 1px solid #1ED760;
+    background-color: #1ed760;
+    border: 1px solid #1ed760;
     box-shadow: 3px;
   }
-  .pauseIcon__container .container:hover{
+  .pauseIcon__container .container:hover {
     cursor: pointer;
   }
-  img{
+  img {
     border-radius: 2px 0px 0px 2px;
   }
-  .play__icon{
+  .play__icon {
     display: none !important;
   }
 
   &:hover {
-
     cursor: pointer;
   }
 
-  &:hover  .play__icon{
+  &:hover .play__icon {
     display: flex !important;
   }
 `;

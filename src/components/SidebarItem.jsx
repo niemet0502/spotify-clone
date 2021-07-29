@@ -20,7 +20,7 @@ SidebarItem.propTypes = {
   active: PropTypes.bool.isRequired,
 };
 
-const SidebarItemContainer = styled.a` 
+const SidebarItemContainer = styled.a`
   a {
     display: flex;
     align-items: center;
@@ -33,19 +33,19 @@ const SidebarItemContainer = styled.a`
     margin-bottom: 10px;
   }
 
-  a .MuiSvgIcon-root{
+  a .MuiSvgIcon-root {
     width: 32px;
     height: 32px;
     margin-right: 10px;
   }
 
-   .active{
-    color : white !important;
+  .active {
+    color: white !important;
     background-color: #282828 !important;
   }
 
-  a:hover{
-    color : white !important;
+  a:hover {
+    color: white !important;
   }
 `;
 

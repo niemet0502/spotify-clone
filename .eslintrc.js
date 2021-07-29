@@ -4,10 +4,7 @@ module.exports = {
     es2021: true,
     'jest/globals': true,
   },
-  extends: [
-    'plugin:react/recommended',
-    'airbnb',
-  ],
+  extends: ['plugin:react/recommended', 'airbnb', 'prettier'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -15,12 +12,8 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-    'jest',
-  ],
-  rules: {
-  },
+  plugins: ['react', 'jest'],
+  rules: {},
   overrides: [
     {
       files: ['*.jsx', '*.js'],
