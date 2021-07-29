@@ -15,14 +15,27 @@ function Layout() {
       <Topbar />
       <div className="Layout">
         <h1>Bon après-midi</h1>
-
         <div className="playlist_container">
-
-          {playlists2.map((playlist) => <Playlist image={playlist.image} active={playlist.active} title={playlist.title} />)}
+          {playlists2.map(
+            (playlist) => (
+              <Playlist
+                image={playlist.image}
+                active={playlist.active}
+                title={playlist.title}
+              />
+            ),
+          )}
         </div>
-
         <div className="playlist_container">
-          {playlists.map((playlist) => <Playlist image={playlist.image} active={playlist.active} title={playlist.title} />)}
+          {playlists.map(
+            (playlist) => (
+              <Playlist
+                image={playlist.image}
+                active={playlist.active}
+                title={playlist.title}
+              />
+            ),
+          )}
         </div>
         <div className="section_container">
           <div>
@@ -31,31 +44,41 @@ function Layout() {
               <h5 className="section__subtitle">Inspiré par votre activité récente.</h5>
             </div>
           </div>
-
           <div className="album__container">
-
-            {albums.map((album) => <Album image={album.image} artiste={album.artiste} album={album.album} />)}
+            {albums.map(
+              (album) => (
+                <Album
+                  image={album.image}
+                  artiste={album.artiste}
+                  album={album.album}
+                />
+              ),
+            )}
           </div>
-
         </div>
-
         <div className="section_container">
           <div>
             <div>
               <h1 className="section__title">Vos artistes préférés </h1>
+              {/* eslint-disable-next-line jsx-a11y/heading-has-content */}
               <h5 className="section__subtitle" />
             </div>
           </div>
-
           <div className="album__container">
-
-            {albums2.map((album) => <Album image={album.image} artiste={album.artiste} album={album.album} round={album.round} />)}
+            {albums2.map(
+              (album) => (
+                <Album
+                  image={album.image}
+                  artiste={album.artiste}
+                  album={album.album}
+                  round={album.round}
+                />
+              ),
+            )}
           </div>
-
         </div>
       </div>
       <Footer />
-
     </LayoutContainer>
   );
 }
@@ -101,4 +124,5 @@ const LayoutContainer = styled.div`
     justify-content: space-between;
   }
 `;
+
 export default Layout;

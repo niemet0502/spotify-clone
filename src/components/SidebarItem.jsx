@@ -1,18 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 function SidebarItem({ Icon, text, active }) {
   return (
     <SidebarItemContainer>
-      <a href="" className={`link ${active == 'true' ? 'active' : 'unactive'}`}>
+      {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+      <a href="#" className={`link ${active ? 'active' : 'unactive'}`}>
         {Icon && <Icon />}
         {text}
       </a>
     </SidebarItemContainer>
   );
 }
-const SidebarItemContainer = styled.a`
- 
+
+SidebarItem.propTypes = {
+  Icon: PropTypes.node.isRequired,
+  text: PropTypes.string.isRequired,
+  active: PropTypes.bool.isRequired,
+};
+
+const SidebarItemContainer = styled.a` 
   a {
     display: flex;
     align-items: center;
@@ -39,6 +47,6 @@ const SidebarItemContainer = styled.a`
   a:hover{
     color : white !important;
   }
-
 `;
+
 export default SidebarItem;

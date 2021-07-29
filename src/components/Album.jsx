@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
+import PropTypes from 'prop-types';
 
 function Album({
   image, artiste, album, round,
@@ -16,6 +17,13 @@ function Album({
     </AlbumComponent>
   );
 }
+
+Album.propTypes = {
+  image: PropTypes.string.isRequired,
+  artiste: PropTypes.string.isRequired,
+  album: PropTypes.string.isRequired,
+  round: PropTypes.bool.isRequired,
+};
 
 const AlbumComponent = styled.div`
   &:hover{

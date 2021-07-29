@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
-import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 
 function TopBar() {
   return (

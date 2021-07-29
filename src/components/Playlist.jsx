@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import PauseOutlinedIcon from '@material-ui/icons/PauseOutlined';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
@@ -28,6 +29,13 @@ function Playlist({ image, title, active }) {
     </PlaylistComponent>
   );
 }
+
+Playlist.propTypes = {
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  active: PropTypes.bool.isRequired,
+};
+
 const PlaylistComponent = styled.div`
   height: 87px;
   width: 290px;
